@@ -10,6 +10,8 @@ platform:
 steps:
 - name: build docker image
   image: plugins/docker
+  environment:
+    KUBECTL_VERSION: "v1.18.10"
   settings:
     repo: wdcurryii/drone-kubectl-arm64
     username:

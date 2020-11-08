@@ -1,6 +1,5 @@
 FROM ubuntu:latest
 LABEL maintainer "Will Curry <wcurry@nofuntech.com>"
 
-RUN apt-get update && apt-get install wget -y
-RUN wget https://dl.k8s.io/v1.18.0-rc.1/kubernetes-client-linux-arm64.tar.gz
-RUN tar zxf kubernetes-client-linux-arm64.tar.gz
+RUN apt-get update && apt-get install curl -y
+RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/linux/arm64/kubectl"
