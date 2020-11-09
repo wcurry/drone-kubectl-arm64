@@ -1,6 +1,8 @@
-# drone-kubectl-arm64
+# drone-kubectl-arm64 [![Build Status](https://drone.robotican.org/api/badges/wcurry/drone-kubectl-arm64/status.svg)](https://drone.robotican.org/wcurry/drone-kubectl-arm64)
 
-This [Drone](https://drone.io/) plugin allows you to use `kubectl` in Arm64 clusters. Cron'd monthly builds for k8s v1.16-v1.19.
+This [Drone](https://drone.io/) plugin allows you to use `kubectl` in Arm64 clusters.
+
+Cron'd monthly builds for k8s v1.16-v1.19.
 
 ## Usage
 
