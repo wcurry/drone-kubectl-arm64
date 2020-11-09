@@ -13,7 +13,7 @@ name: deploy
 
 steps:
   - name: deploy
-    image: wcdurryii/drone-kubectl-arm64:1.18
+    image: wdcurryii/drone-kubectl-arm64:1.18
     settings:
       kubernetes_server:
         from_secret: k8s_server
