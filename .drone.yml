@@ -8,7 +8,35 @@ platform:
   arch: arm64
 
 steps:
-- name: build docker image
+- name: build kubectl 1.16 docker image
+  image: plugins/docker
+  settings:
+    build_args:
+      - KUBECTL_VERSION=1.16.15
+    repo: wdcurryii/drone-kubectl-arm64
+    tags:
+      - '1.16'
+      - '1.16.15'
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+
+- name: build kubectl 1.17 docker image
+  image: plugins/docker
+  settings:
+    build_args:
+      - KUBECTL_VERSION=1.17.13
+    repo: wdcurryii/drone-kubectl-arm64
+    tags:
+      - '1.17'
+      - '1.17.13'
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+
+- name: build kubectl 1.18 docker image
   image: plugins/docker
   settings:
     build_args:
@@ -17,6 +45,20 @@ steps:
     tags:
       - '1.18'
       - '1.18.10'
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+
+- name: build kubectl 1.19 docker image
+  image: plugins/docker
+  settings:
+    build_args:
+      - KUBECTL_VERSION=1.19.3
+    repo: wdcurryii/drone-kubectl-arm64
+    tags:
+      - '1.19'
+      - '1.19.3'
     username:
       from_secret: docker_username
     password:
