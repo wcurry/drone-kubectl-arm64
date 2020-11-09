@@ -1,6 +1,6 @@
 # drone-kubectl-arm64
 
-This [Drone](https://drone.io/) plugin allows you to use `kubectl` in Arm64 clusters.
+This [Drone](https://drone.io/) plugin allows you to use `kubectl` in Arm64 clusters. Cron'd monthly builds for k8s v1.16-v1.19.
 
 ## Usage
 
@@ -11,7 +11,7 @@ name: deploy
 
 steps:
   - name: deploy
-    image: wcdurryii/drone-kubectl-arm64
+    image: wcdurryii/drone-kubectl-arm64:1.18
     settings:
       kubernetes_server:
         from_secret: k8s_server
