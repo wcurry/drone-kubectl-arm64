@@ -2,7 +2,7 @@
 
 set -e
 
-PATH="/opt/drone-kubectl-arm64/bin:$PATH"
+PATH="/usr/local/bin:$PATH"
 
 INIT_FILE=/opt/drone-kubectl-arm64/initialized
 
