@@ -1,6 +1,9 @@
 FROM ubuntu:latest
 LABEL maintainer "Will Curry <wcurry@nofuntech.com>"
 
+ARG KUBECTL_VERSION
+RUN test -n "$KUBECTL_VERSION"
+
 COPY init-kubectl kubectl /opt/drone-kubectl-arm64/bin/
 
 RUN apt-get update && apt-get upgrade -y && apt-get install curl -y
