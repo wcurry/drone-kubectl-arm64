@@ -30,3 +30,4 @@ steps:
 ### Special thanks
 
 Inspired by [drone-kubectl](https://github.com/sinlead/drone-kubectl) and [drone-kubernetes](https://github.com/honestbee/drone-kubernetes).
+
